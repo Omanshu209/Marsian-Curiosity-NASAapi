@@ -1,6 +1,5 @@
 from requests import get
 from random import randint
-#from webbrowser import open
 from kivymd.app import MDApp
 from kivy.lang import Builder
 
@@ -51,7 +50,6 @@ MDScreen:
 class MainApp(MDApp):
 	
 	def build(self):
-		#Loader.loading_image = ""
 		self.theme_cls.theme_style = "Light"
 		self.theme_cls.primary_palette = "Lime"
 		return Builder.load_string(KV)
