@@ -1,0 +1,40 @@
+MDScreen:
+		
+	MDCard:
+		size_hint:.95,.9
+		pos_hint:{'center_x':.5,'center_y':.54}
+		elevation:7
+		padding:25
+		spacing:25
+		orientation:'vertical' 
+		
+		MDRectangleFlatButton:
+			pos_hint:{'center_y':.94,'center_x':.5}
+			size_hint:.9,.1
+			text:"Mars Images [ from NASA's rover ]"
+			bold:True
+			font_size: self.height/2
+			
+		MDFloatingActionButton:
+			icon: "satellite-variant"
+			md_bg_color: app.theme_cls.primary_color
+			pos_hint:{'center_y':.94,'center_x':.91}
+			size_hint:.1,.09
+			on_release:
+				app.changeImg()
+		
+		AsyncImage:
+			id:img
+			size_hint:.9,.7
+			source:"http://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000MR0044631300503690E01_DXXX.jpg"
+			
+		MDLabel:
+			id:imgData
+			size_hint_y:.2
+			
+	MDRectangleFlatButton:
+		text:'D   e   v   e   l   o   p   e   d       B   y       O   m   a   n   s   h   u' 
+		pos_hint:{'center_x':.5,'center_y':0.035}
+		size_hint:.8,.02
+		font_size: self.height/2
+		bold:True
