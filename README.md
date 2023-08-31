@@ -1,1 +1,1 @@
-# MarsImageViewerApp_NASA
+# Marsian Curiosity
